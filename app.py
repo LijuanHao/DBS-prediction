@@ -28,6 +28,11 @@ def main():
 def prediction():
     return(render_template("prediction.html"))
 
+@app.route("/joke", methods=["GET", "POST"])
+def joke():
+    joke = "Why did the chicken cross the road? To chope seat with tissue paper!'"
+    return render_template("joke.html", j=joke)
+
 @app.route("/DBS",methods=["GET","POST"])
 def DBS():
     return(render_template("DBS.html"))
