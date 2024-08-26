@@ -42,6 +42,15 @@ def DBS_prediction():
     q = float(request.form.get("q"))
     return(render_template("DBS_prediction.html",r=90.2 + (-50.6*q)))
 
+@app.route("/creditability",methods=["GET","POST"])
+def creditability():
+    return(render_template("creditability.html"))
+
+@app.route("/creditability_prediction",methods=["GET","POST"])
+def creditabiity_prediction():
+    q = float(request.form.get("q"))
+    return(render_template("credictability_prediction.html",r=1.22937616 + (-0.00011189*q)))
+
 @app.route("/makersuite",methods=["GET","POST"])
 def makersuite():
     return(render_template("makersuite.html"))
